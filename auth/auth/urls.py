@@ -16,7 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ruhusa.views import login_page
+from ruhusa.views import register_page
+from ruhusa.views import home
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('home/', home, name='recipes'),
+    path("admin", admin.site.urls),
+    path('login/', login_page, name='login_page'),
+    path('register/', register_page, name='register')
+
 ]
