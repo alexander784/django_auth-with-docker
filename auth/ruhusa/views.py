@@ -16,17 +16,16 @@ def login_page(request):
 
         if not User.objects.filter(username=username).exists():
             messages.error(request, 'Invalid Username')
-            return redirect('/login/')
+            return redirect('login_page')
         
         user = authenticate(username=username, password=password)
 
         if user is None:
             messages.error(request,'Invalid password')
-
-            return redirect('/login/')
+            return redirect('login_page')
         else:
             login(request, user)
-            return redirect('home/')
+            return redirect('home')
         
     return render(request, 'login.html')
 

@@ -23,7 +23,7 @@ from ruhusa.views import home
 
 
 urlpatterns = [
-    path('home/', home, name='recipes'),
+    path('home/', home, name='home'),
     path("admin", admin.site.urls),
     path('login/', login_page, name='login_page'),
     path('register/', register_page, name='register')
