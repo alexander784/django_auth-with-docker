@@ -24,12 +24,12 @@
  * Docker compose
 
  ## Usage
- 1. CLone the Repo
- `git clone https://github.com/alexander784/django_auth-with-docker.git` 
- 2. Build and Run  the conatiners
+ 1. CLone the Repo </br>
+ `git clone https://github.com/alexander784/django_auth-with-docker.git` </br>
+ 2. Build and Run  the conatiners </br>
  `docker-compose up --build -d`
 
- 3. Apply migrations
+ 3. Apply migrations</br>
  `docker-compose exec web python manage.py migrate`
  4. Access the App
  * Web App: http://127.0.0.1:8000
